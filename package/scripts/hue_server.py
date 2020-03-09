@@ -20,6 +20,8 @@ class HueServer(Script):
     self.install_packages(env)
     Logger.info(format("Downloading Hue Service"))
     download_hue()
+    Execute('mkdir -p /var/log/hue')
+    Execute('chown -R hue:hue /var/log/hue')
 
   def configure(self, env):
     import params
