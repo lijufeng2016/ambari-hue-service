@@ -45,7 +45,12 @@ rm -rf /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/HUE
 sudo git clone https://github.com/lijufeng2016/ambari-hue-service.git /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/HUE
 ```
 
+6.hue的安装包并放到你的Apache服务器上
 
+![15837480895742](https://github.com/lijufeng2016/ambari-hue-service/blob/master/screenshots/15837480895742.png)
+
+
+在ambari server节点执行
 
 ## 代码修改
 
