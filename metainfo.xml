@@ -28,7 +28,7 @@
 	    <name>HUE_SERVER</name>
 	    <displayName>Hue Server</displayName>
 	    <category>MASTER</category>
-	    <cardinality>1</cardinality>
+	    <cardinality>1+</cardinality>
 	    <commandScript>
 	      <script>scripts/hue_server.py</script>
 	      <scriptType>PYTHON</scriptType>

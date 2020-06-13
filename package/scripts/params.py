@@ -18,6 +18,8 @@ from resource_management.libraries.functions.get_not_managed_resources import ge
 from resource_management.libraries.script.script import Script
 import status_params
 import functools
+import commands
+
 # a map of the Ambari role to the component name
 # for use with <stack-root>/current/<component>
 SERVER_ROLE_DIRECTORY_MAP = {
@@ -29,7 +31,7 @@ config = Script.get_config()
 tmp_dir = Script.get_tmp_dir()
 stack_root = Script.get_stack_root()
 # Hue download url
-download_url = 'http://sh05-hdp3-manage001/hue/hue-4.6.0.tgz'
+download_url = 'http://yum.s.2345inc.com/hortonworks/other/hue-4.6.0.tgz'
 # New Cluster Stack Version that is defined during the RESTART of a Rolling Upgrade
 version = default("/commandParams/version", None)
 stack_name = default("/hostLevelParams/stack_name", None)
@@ -37,7 +39,7 @@ stack_name = default("/hostLevelParams/stack_name", None)
 service_packagedir = os.path.realpath(__file__).split('/scripts')[0]
 cluster_name = str(config['clusterName'])
 # self define
-ambari_server_hostname = 'sh05-hdp3-manage001'
+ambari_server_hostname = 'wx12-dsj-mgr001'
 
 #hue_apps = ['security','pig','filebrowser','jobbrowser','zookeeper','search','rdbms','metastore','spark','beeswax','jobsub','hbase','oozie','indexer']
 hue_hdfs_module_enabled = config['configurations']['hue-env']['hue-hdfs-module-enabled']
@@ -96,7 +98,9 @@ hue_user = config['configurations']['hue-env']['hue_user']
 hue_group = config['configurations']['hue-env']['hue_group']
 hue_local_home_dir = os.path.expanduser("~{0}".format(hue_user))
 hue_hdfs_home_dir = format('/user/{hue_user}')
-hue_install_dir = '/usr/hdp/3.1.4.0-315'
+
+cmd = "/usr/bin/hdp-select versions"
+hue_install_dir = '/usr/hdp/'+commands.getoutput(cmd)
 hue_dir = format('{hue_install_dir}/hue')
 hue_conf_dir = format('{hue_dir}/desktop/conf')
 hue_bin_dir = format('{hue_dir}/build/env/bin')

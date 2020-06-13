@@ -36,7 +36,7 @@ usage () {
 }
 
 USERID="admin"
-PASSWD="admin"
+PASSWD="AxcRXPi7N6J8xeSx:iR."
 PORT=":8080"
 SSL_URL_PREFIX=""
 
