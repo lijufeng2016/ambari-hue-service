@@ -208,7 +208,7 @@ vim /usr/hdp/3.1.4.0-315/hue/apps/beeswax/src/beeswax/server/hive_server2_lib.py
 
 解决方法：
 
-webhdfs_url=http://sh05-hdp3-manage001:50070/webhdfs/v1
+webhdfs_url=http://xxxxxxxxxxxx:50070/webhdfs/v1
 
 ![1583743978311](https://github.com/lijufeng2016/ambari-hue-service/blob/master/screenshots/1583743978311.png)
 
