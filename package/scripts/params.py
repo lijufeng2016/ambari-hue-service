@@ -31,7 +31,7 @@ config = Script.get_config()
 tmp_dir = Script.get_tmp_dir()
 stack_root = Script.get_stack_root()
 # Hue download url
-download_url = 'http://yum.s.2345inc.com/hortonworks/other/hue-4.6.0.tgz'
+download_url = 'http://xxxxxxxxxxxxxxx/hortonworks/other/hue-4.6.0.tgz'
 # New Cluster Stack Version that is defined during the RESTART of a Rolling Upgrade
 version = default("/commandParams/version", None)
 stack_name = default("/hostLevelParams/stack_name", None)
@@ -39,7 +39,7 @@ stack_name = default("/hostLevelParams/stack_name", None)
 service_packagedir = os.path.realpath(__file__).split('/scripts')[0]
 cluster_name = str(config['clusterName'])
 # self define
-ambari_server_hostname = 'wx12-dsj-mgr001'
+ambari_server_hostname = 'xxxxxxxxxxxxxxxxx'
 
 #hue_apps = ['security','pig','filebrowser','jobbrowser','zookeeper','search','rdbms','metastore','spark','beeswax','jobsub','hbase','oozie','indexer']
 hue_hdfs_module_enabled = config['configurations']['hue-env']['hue-hdfs-module-enabled']
